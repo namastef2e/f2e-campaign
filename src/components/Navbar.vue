@@ -1,3 +1,3 @@
 <template>
-    132
+  <p>中文字測試</p>
 </template>
