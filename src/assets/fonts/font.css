@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "BluuNext-Bold";
+    src: url('/src/assets/fonts/bluu-next/BluuNext-Bold.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BluuNext-Bolditalic";
+    src: url('/src/assets/fonts/bluu-next/BluuNext-Bolditalic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BluuNext-Titling";
+    src: url('/src/assets/fonts/bluu-next/BluuNext-Titling.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GenSekiGothic-B";
+    src: url('/src/assets/fonts/genseki-font-master/GenSekiGothic-B.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GenSekiGothic-H";
+    src: url('/src/assets/fonts/genseki-font-master/GenSekiGothic-H.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GenSekiGothic-L";
+    src: url('/src/assets/fonts/genseki-font-master/GenSekiGothic-L.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GenSekiGothic-M";
+    src: url('/src/assets/fonts/genseki-font-master/GenSekiGothic-M.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GenSekiGothic-R";
+    src: url('/src/assets/fonts/genseki-font-master/GenSekiGothic-R.ttc');
+    font-weight: normal;
+    font-style: normal;
+}
