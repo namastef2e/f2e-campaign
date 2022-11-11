@@ -3,11 +3,19 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from "./components/HelloWorld.vue";
 import Navbar from "./components/Navbar.vue";
+import Banner from "./components/Banner.vue";
+import TextMarquee from "./components/TextMarquee.vue";
+import QuestionBlock from "./components/QuestionBlock.vue";
+import NormalQuestion from "./components/NormalQuestion.vue";
 </script>
 
 <template>
   <Navbar />
-  <div>
+  <Banner />
+  <TextMarquee />
+  <QuestionBlock />
+  <NormalQuestion />
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -15,7 +23,7 @@ import Navbar from "./components/Navbar.vue";
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style scoped>
