@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { ref, computed, watch, onBeforeMount, onBeforeUnmount } from "vue";
+import { ref, onBeforeMount, onBeforeUnmount } from "vue";
 import { useViewStore } from "./store";
 
 import Navbar from "./components/Navbar.vue";
