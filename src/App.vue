@@ -5,6 +5,7 @@
   <TextMarquee />
   <QuestionBlock />
   <Characters />
+  <Sponsors />
   <NormalQuestion />
 </template>
 
@@ -17,6 +18,7 @@ import Banner from "./components/Banner.vue";
 import TextMarquee from "./components/TextMarquee.vue";
 import QuestionBlock from "./components/QuestionBlock.vue";
 import Characters from "./components/Characters.vue";
+import Sponsors from "./components/Sponsors.vue";
 import NormalQuestion from "./components/NormalQuestion.vue";
 
 export default {
@@ -27,6 +29,7 @@ export default {
     TextMarquee,
     QuestionBlock,
     Characters,
+    Sponsors,
     NormalQuestion,
   },
   setup() {

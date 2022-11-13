@@ -1,5 +1,5 @@
 <template>
-  <section class="w-3/4 mx-auto mt-60">
+  <section class="w-3/4 mx-auto my-60">
     <div class="text-center">
       <h2 class="character-title">互動式網頁設計</h2>
       <p>以下兩個角色進行攜手合作</p>
