@@ -1,13 +1,3 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from "./components/HelloWorld.vue";
-import Navbar from "./components/Navbar.vue";
-import Banner from "./components/Banner.vue";
-import TextMarquee from "./components/TextMarquee.vue";
-import QuestionBlock from "./components/QuestionBlock.vue";
-import NormalQuestion from "./components/NormalQuestion.vue";
-</script>
 
 <template>
   <Navbar />
@@ -15,27 +5,52 @@ import NormalQuestion from "./components/NormalQuestion.vue";
   <TextMarquee />
   <QuestionBlock />
   <NormalQuestion />
-  <!-- <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script>
+import { ref, computed, watch, onBeforeMount, onBeforeUnmount } from "vue";
+import { useViewStore } from "./store";
+
+import Navbar from "./components/Navbar.vue";
+import Banner from "./components/Banner.vue";
+import TextMarquee from "./components/TextMarquee.vue";
+import QuestionBlock from "./components/QuestionBlock.vue";
+import NormalQuestion from "./components/NormalQuestion.vue";
+
+export default {
+  name: "App",
+  components: {
+    Navbar,
+    Banner,
+    TextMarquee,
+    QuestionBlock,
+    NormalQuestion,
+  },
+  setup() {
+    const store = useViewStore();
+    const screenWidth = ref(window.innerWidth);
+
+    onBeforeMount(async () => {
+      window.addEventListener("resize", handleResize);
+      window.addEventListener("scroll", handleScroll);
+      handleResize();
+    });
+
+    //監控螢幕大小
+    const handleResize = () => {
+      screenWidth.value = window.innerWidth;
+      store.setIsMobile(window.innerWidth > 767 ? false : true);
+    };
+
+    //螢幕上下滾動
+    const handleScroll = () => {
+      store.setScrollPosition(window.scrollY);
+    };
+
+    onBeforeUnmount(() => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    });
+  },
+};
+</script>
