@@ -47,7 +47,7 @@ function windowScroll(e) {
 </script>
 
 <template>
-  <div class="banner">
+  <div class="banner bg-secondary-tint">
     <img src="../assets/image/banner/bannerLeftCircle.svg" class="absolute bannerLeftCircle"/>
     <img src="../assets/image/banner/bannerBG.svg" class="absolute banerBG"/>
     <img src="../assets/image/banner/bannerLine.svg" class="absolute line" id="moveLine"/>
