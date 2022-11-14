@@ -13,7 +13,7 @@ function windowScroll(e) {
   var scrollDirection = (afterScrollTop - beforeScrollTop > 0) ? "down" : "up";
   beforeScrollTop = afterScrollTop;
   const textCircle = document.querySelector(".leftMoveText");
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   if (0 <= window.scrollY && window.scrollY < 100) {
   // console.log(scrollDirection);
   // console.log(textCircle.getBoundingClientRect().left);

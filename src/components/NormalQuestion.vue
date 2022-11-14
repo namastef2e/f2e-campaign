@@ -1,5 +1,5 @@
 <template>
-  <div class="questionContainer h-screen flex items-center justify-center">
+  <div class="questionContainer flex items-center justify-center py-20">
     <div class="w-3/4">
       <div class="flex justify-center gap-x-10 py-12">
         <div class="absolute title">常見問題</div>
@@ -15,6 +15,9 @@
             <h5 class="py-4 text-stone-500">{{ item.answer }}</h5>
           </template>
         </div>
+      </div>
+      <div class="flex justify-end cursor-pointer">
+        <div class="toTopContainer flex items-center justify-center mt-12" @click="toTop"><img src="../assets/image/normalQuestion/arrow.svg" class=""/></div>
       </div>
     </div>
   </div>
@@ -71,8 +74,12 @@ export default {
       currentTab.value = tab;
     }
 
+    const toTop = () => {
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }
+
     return {
-      currentTab, questionData, click, chageTab
+      currentTab, questionData, click, chageTab, toTop
     };
   },
 };
@@ -115,6 +122,12 @@ h5{
 
 .active {
   color: #007991;
+}
+
+.toTopContainer {
+  width: 80px;
+  height: 80px;
+  background: #78FFD6;
 }
 
 
