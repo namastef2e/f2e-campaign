@@ -8,6 +8,9 @@ module.exports = {
       'default': ['BluuNext-Bold', 'BluuNext-Bolditalic', 'BluuNext-Titling', 'GenSekiGothic-B', 'GenSekiGothic-H', 'GenSekiGothic-L', 'GenSekiGothic-M', 'GenSekiGothic-R']
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       colors: {
         primary: {
           dark: '#007991',
