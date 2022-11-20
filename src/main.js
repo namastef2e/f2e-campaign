@@ -6,6 +6,7 @@ const pinia = createPinia()
 import './style.css'
 import './index.css'
 import './assets/fonts/font.css'
+import $ from 'jquery'
 
 const app = createApp(App)
 
